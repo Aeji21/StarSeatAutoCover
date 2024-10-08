@@ -189,6 +189,11 @@ button:hover {
 
 /* For mobile devices (screens up to 600px) */
 @media (max-width: 600px) {
+
+    .container {
+        height: auto;
+    }
+    
     .navbar {
         display: flex; /* Use flexbox for layout */
         justify-content: center; /* Center align navbar items */
@@ -205,7 +210,8 @@ button:hover {
     }
 
     .navbar nav ul li {
-        text-align: center; /* Center align the text */
+        text-align: center;
+        padding-right: 7%;/* Center align the text */
     }
 
     .navbar nav ul li a {
@@ -214,6 +220,7 @@ button:hover {
         padding: 10px 15px; /* Add some padding */
         display: block; /* Make the link fill the li */
         transition: background-color 0.3s; /* Smooth background transition */
+        text-align: center;
     }
 
     .navbar nav ul li a:hover {
@@ -227,33 +234,46 @@ button:hover {
 
     p {
         font-size: 14px; /* Adjust font size for better readability */
-        margin-top: 30%px; /* Space above paragraph */
+        margin-top: 20px; /* Space above paragraph */
     }
 
+    .row {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: flex-start;
+        padding-top: 90%; /* Align items to the top */
+    }
+    
     .col {
         padding: 20px; /* Reduce padding on mobile */
         display: flex; /* Use flexbox for layout */
         flex-direction: column; /* Stack elements vertically */
-        justify-content: flex-start; /* Start from the top */
         height: auto; /* Allow height to adjust */
-        margin-bottom: 40px; /* Add space below the column for extra length */
+        margin-bottom: 20px; /* Space below the column */
     }
-
+    
     .card-container {
-        grid-template-columns: 1fr; /* Stack cards in a single column for mobile */
-        padding: 0 20px;
-        max-height: none; /* No max height */
-        overflow-y: visible; /* Allow visible overflow */
-        margin-top: 140%; /* Keep existing margin for spacing */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: row; /* Stack cards horizontally */
+        flex-wrap: wrap; /* Allow cards to wrap to the next line */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding: 20px; /* Add some padding around the container */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        margin-top: 20px; /* Space above the card container */
+        margin-bottom: 40px; /* Space below the card container */
     }
-
+    
     .card {
-        width: 100%; /* Full width for mobile */
-        height: 200px; /* Set a specific height for each card */
-        margin-bottom: 10px; /* Space between cards */
-        background-color: #f0f0f0; /* Example background color for visibility */
+        width: 200px; /* Fixed width for the cards */
+        height: 200px; /* Fixed height */
+        background-color: #f0f0f0; /* Background color for visibility */
+        margin-bottom: 10px; /* Space between cards vertically */
+        border-radius: 3%; /* Rounded corners for cards */
+        margin-right: 10px; /* Space between cards horizontally */
     }
-
+    
+    
     button {
         width: 120px; /* Smaller button */
         font-size: 10px;
